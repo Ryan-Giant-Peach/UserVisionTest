@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="alertbar" aria-live="assertive">
+      Missing required form input!
+    </div>
+    <ul class="skip-links">
+      <li><a href="#nav">Skip to navigation</a></li>
+      <li><a href="#main">Skip to main content</a></li>
+    </ul>
+
+    <header role="banner" id="top">
+      <strong>User Vision Interview Assessment</strong>
+      <nav role="navigation" id="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main" id="main">
+      <h1>Accessibility</h1>
+      <p>lorem ipsum jargon</p>
+      <img src="img/uservision.png" alt="User Vision logo" />
+    </main>
+    <div id="error"></div>
+    <form id="form">
+      <div>
+        <label for="name">Name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Enter your name"
+          aria-required="true"
+        />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Enter your password"
+          aria-required="true"
+        />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="animal-form" aria-atomic="true">
+      <button onclick="onAll()" role="button">Click for all Animals</button>
+      <button onclick="onDogs()" role="button">Show only dogs</button>
+      <button onclick="onCats()" role="button">show only cats</button>
+      <div id="animallist" role="list" aria-live="assertive"></div>
+    </div>
+
+    <footer role="contentinfo">
+      <p>Accessibility Website <a href="#top">Top</a></p>
+    </footer>
+  </body>
+</html>
